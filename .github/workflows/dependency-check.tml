@@ -8,7 +8,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-      - name: Build project with Maven
+      - name: Build project with npm
+        run: npm install
         run: mvn clean install
       - name: Depcheck
         uses: dependency-check/Dependency-Check_Action@main
